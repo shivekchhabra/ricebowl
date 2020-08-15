@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+
+<html lang="python3">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data-Preprocessing &#8212; ricebowl 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Image Pre-Processing" href="image-preprocessing.html" />
+    <link rel="prev" title="Need Help?" href="help.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="data-preprocessing">
+<h1>Data-Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">¶</a></h1>
+<p>Documentation of ricebowl data preprocessing.</p>
+<div class="section" id="read-csv">
+<h2>read_csv<a class="headerlink" href="#read-csv" title="Permalink to this headline">¶</a></h2>
+<p>General function to read a csv file.</p>
+<p>Parameters- Path of the csv file</p>
+<p>Output- Dataframe</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="read-excel">
+<h2>read_excel<a class="headerlink" href="#read-excel" title="Permalink to this headline">¶</a></h2>
+<p>General function to read an excel file.</p>
+<p>Parameters- Path of the excel file, Sheet name</p>
+<p>Output- Dataframe</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">sheet_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reformat-col-headers">
+<h2>reformat_col_headers<a class="headerlink" href="#reformat-col-headers" title="Permalink to this headline">¶</a></h2>
+<p>General function for formatting the column headers to lower case.
+All &quot;spaces&quot; and &quot;-&quot; are replaced by &quot;_&quot;</p>
+<p>Parameters- Dataframe</p>
+<p>Output- Dataframe with formatted column headers</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">reformat_col_headers</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="str-to-datetime">
+<h2>str_to_datetime<a class="headerlink" href="#str-to-datetime" title="Permalink to this headline">¶</a></h2>
+<p>General function to convert string columns in date format to datetime.
+Add the names of the columns which need to be converted to datetime from string type.</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with the columns updated to datetime</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">str_to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="timestamp-to-datetime">
+<h2>timestamp_to_datetime<a class="headerlink" href="#timestamp-to-datetime" title="Permalink to this headline">¶</a></h2>
+<p>General function to convert timestamp columns to datetime.
+Add the names of the columns which need to be converted to datetime from timestamp.</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with the columns updated to datetime</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">timestamp_to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="to-timestamp">
+<h2>to_timestamp<a class="headerlink" href="#to-timestamp" title="Permalink to this headline">¶</a></h2>
+<p>General function to convert datetime/str columns in datetime format to timestamp.
+Add the names of the columns which need to be converted to timestamp.</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with the columns updated to timestamp</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">to_timestamp</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="label-encode">
+<h2>label_encode<a class="headerlink" href="#label-encode" title="Permalink to this headline">¶</a></h2>
+<p>General function to label encode the categorical columns.
+Add the names of the columns which need to be encoded.</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with the columns updated with encoded labels, label encoder object</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">label_encode</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="one-hot-encode">
+<h2>one_hot_encode<a class="headerlink" href="#one-hot-encode" title="Permalink to this headline">¶</a></h2>
+<p>General function to one-hot encode the categorical columns.
+Add the names of the columns which need to be encoded.</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with the columns updated with encoded labels</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">one_hot_encode</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dates-diff">
+<h2>dates_diff<a class="headerlink" href="#dates-diff" title="Permalink to this headline">¶</a></h2>
+<p>General function to calculate the difference between 2 date columns.</p>
+<p>Parameters- Dataframe, column 1, column 2, diff_type(Optional; Default='days'; Takes in 'days'/'weeks'/'months'/'years')</p>
+<p>Output- Dataframe with a new column according to difference. For example if diff_type='weeks' then the new column will be of the name 'weeks'</p>
+<p>Error Print- If a wrong &quot;diff_type&quot; is provided, prints an error message.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">dates_diff</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">col1</span><span class="p">,</span><span class="n">col2</span><span class="p">,</span><span class="n">diff_type</span><span class="o">=</span><span class="s1">&#39;days&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="drop-duplicates">
+<h2>drop_duplicates<a class="headerlink" href="#drop-duplicates" title="Permalink to this headline">¶</a></h2>
+<p>General function to remove duplicate rows.</p>
+<p>Parameters- Dataframe</p>
+<p>Output- Dataframe without duplicate rows.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reset-index">
+<h2>reset_index<a class="headerlink" href="#reset-index" title="Permalink to this headline">¶</a></h2>
+<p>General function to reset the index of the dataframe.</p>
+<p>Parameters- Dataframe, Drop(True/False)</p>
+<p>Output- Dataframe with a new index</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">reset_index</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="to-dtype">
+<h2>to_dtype<a class="headerlink" href="#to-dtype" title="Permalink to this headline">¶</a></h2>
+<p>General function to convert a column to a particular datatype.</p>
+<p>Parameters- Dataframe, Data type, kwargs[column names]</p>
+<p>Output- Dataframe with updated columns</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">to_dtype</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span><span class="o">....</span><span class="p">,</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fill-mode">
+<h2>fill_mode<a class="headerlink" href="#fill-mode" title="Permalink to this headline">¶</a></h2>
+<p>General function to fill null values with mode.</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with the columns updated. The null values in the columns will be filled with the mode of that column.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">fill_mode</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fill-mean">
+<h2>fill_mean<a class="headerlink" href="#fill-mean" title="Permalink to this headline">¶</a></h2>
+<p>General function to fill null values with mean.</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with the columns updated. The null values in the columns will be filled with the mean of that column.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">fill_mean</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="melt">
+<h2>melt<a class="headerlink" href="#melt" title="Permalink to this headline">¶</a></h2>
+<p>General function to melt data.</p>
+<p>Parameters- Dataframe, Columns to melt(in the form of a list), New column name to be made after melting, Column name displaying values; Default- 'value'</p>
+<p>Output- Dataframe with the columns updated. The data is melted.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">melt</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span><span class="s1">&#39;col2&#39;</span><span class="o">...</span><span class="s1">&#39;col_n&#39;</span><span class="p">],</span> <span class="s1">&#39;new_col_name_xyz&#39;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="split-columns">
+<h2>split_columns<a class="headerlink" href="#split-columns" title="Permalink to this headline">¶</a></h2>
+<p>General function to make existing data a list of split values.</p>
+<p>Parameters- Dataframe, Original Column, Separator to split on</p>
+<p>Output- Dataframe with columns seperated.
+Example: if a column had dates like 2019-01-01 and we use this function with a separator '-', then the data will be modified to [2019,01,01]</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">split_columns</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;column_name&#39;</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-unwanted-chars">
+<h2>remove_unwanted_chars<a class="headerlink" href="#remove-unwanted-chars" title="Permalink to this headline">¶</a></h2>
+<p>General function to remove unwanted characters from data.</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with unwanted characters removed. (like $,€,£,inr,¥,₹)</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">remove_unwanted_chars</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fill-num-abbreviations">
+<h2>fill_num_abbreviations<a class="headerlink" href="#fill-num-abbreviations" title="Permalink to this headline">¶</a></h2>
+<p>General function to fill &quot;million M&quot;, &quot;billion B&quot;, &quot;thousand k&quot;, &quot;lakhs L&quot;, &quot;crore cr&quot;</p>
+<p>Parameters- Dataframe, kwargs[column names]</p>
+<p>Output- Dataframe with filled abbreviations.
+Example: 20k would be replaced by 20000</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">fill_num_abbreviations</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">c1</span><span class="o">=</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="n">c2</span><span class="o">=</span><span class="s1">&#39;col2&#39;</span> <span class="o">....</span> <span class="n">cn</span><span class="o">=</span><span class="s1">&#39;col_n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ricebowl</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Need Help?</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data-Preprocessing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#read-csv">read_csv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#read-excel">read_excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reformat-col-headers">reformat_col_headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#str-to-datetime">str_to_datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timestamp-to-datetime">timestamp_to_datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-timestamp">to_timestamp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#label-encode">label_encode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#one-hot-encode">one_hot_encode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dates-diff">dates_diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drop-duplicates">drop_duplicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reset-index">reset_index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-dtype">to_dtype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fill-mode">fill_mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fill-mean">fill_mean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#melt">melt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#split-columns">split_columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remove-unwanted-chars">remove_unwanted_chars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fill-num-abbreviations">fill_num_abbreviations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="image-preprocessing.html">Image Pre-Processing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="help.html" title="previous chapter">Need Help?</a></li>
+      <li>Next: <a href="image-preprocessing.html" title="next chapter">Image Pre-Processing</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Shivek Chhabra.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/data-preprocessing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

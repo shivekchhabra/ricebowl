@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+
+<html lang="python3">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Pre-Processing &#8212; ricebowl 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Data-Preprocessing" href="data-preprocessing.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="image-pre-processing">
+<h1>Image Pre-Processing<a class="headerlink" href="#image-pre-processing" title="Permalink to this headline">¶</a></h1>
+<p>Documentation of ricebowl image preprocessing.</p>
+<div class="section" id="read-image">
+<h2>read_image<a class="headerlink" href="#read-image" title="Permalink to this headline">¶</a></h2>
+<p>Reads a single image from the path.</p>
+<p>Parameters- Path of the image</p>
+<p>Output- Image</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">=</span><span class="n">read_img</span><span class="p">(</span><span class="s1">&#39;path of the image&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-image">
+<h2>show_image<a class="headerlink" href="#show-image" title="Permalink to this headline">¶</a></h2>
+<p>Displays the image with a customized title.</p>
+<p>Parameters- Image, title(optional; Default-'img')</p>
+<p>Output- Image (Press any key to continue/exit)</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">=</span><span class="n">show_image</span><span class="p">(</span><span class="n">img</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;my_title&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="write-image">
+<h2>write_image<a class="headerlink" href="#write-image" title="Permalink to this headline">¶</a></h2>
+<p>Writes the image at a given path location with the customized name.</p>
+<p>Parameters- Path+&lt;img_name.ext&gt;, Image</p>
+<p>Output- Image at the given location saved. (Please note: Checks for &lt;if exists&gt; have not been added. Same name will cause conflict)</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">=</span><span class="n">write_image</span><span class="p">(</span><span class="s1">&#39;./foldername/image.png&#39;</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inverting">
+<h2>inverting<a class="headerlink" href="#inverting" title="Permalink to this headline">¶</a></h2>
+<p>Inverts an image (Converts to negative)</p>
+<p>Parameters- Image</p>
+<p>Output- Inverted Image</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">=</span><span class="n">inverting</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gray-scale">
+<h2>gray_scale<a class="headerlink" href="#gray-scale" title="Permalink to this headline">¶</a></h2>
+<p>Converts an image to grayscale</p>
+<p>Parameters- Image</p>
+<p>Output- Gray-Scale Image</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">=</span><span class="n">gray_scale</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="resize">
+<h2>resize<a class="headerlink" href="#resize" title="Permalink to this headline">¶</a></h2>
+<p>Resizes an image</p>
+<p>Parameters- Image, Length, Width</p>
+<p>Output- Resized Image</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">=</span><span class="n">resize</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gaussian-blurring">
+<h2>gaussian_blurring<a class="headerlink" href="#gaussian-blurring" title="Permalink to this headline">¶</a></h2>
+<p>Blurs an image using gaussian blurring.</p>
+<p>Parameters- Image, Kernel(Optional; Default- (21,21)</p>
+<p>Output- Blurred Image</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">=</span><span class="n">gaussian_blurring</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">ksize</span><span class="o">=</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="mi">21</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="orb-features">
+<h2>orb_features<a class="headerlink" href="#orb-features" title="Permalink to this headline">¶</a></h2>
+<p>Extracts features in the passed image</p>
+<p>Parameters- Image</p>
+<p>Output- Feature extracted image, Descriptor Matrix</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="p">,</span><span class="n">desc</span><span class="o">=</span><span class="n">orb_features</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-images">
+<h2>get_images<a class="headerlink" href="#get-images" title="Permalink to this headline">¶</a></h2>
+<p>Returns the array data of images and their labels (entire path)</p>
+<p>Parameters- Path of the folder containing all images</p>
+<p>Output- Data Matrix, Label array</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">,</span><span class="n">labels</span><span class="o">=</span><span class="n">get_images</span><span class="p">(</span><span class="s1">&#39;./path&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ricebowl</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Need Help?</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data-preprocessing.html">Data-Preprocessing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Image Pre-Processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#read-image">read_image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#show-image">show_image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#write-image">write_image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inverting">inverting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gray-scale">gray_scale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resize">resize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gaussian-blurring">gaussian_blurring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orb-features">orb_features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-images">get_images</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="data-preprocessing.html" title="previous chapter">Data-Preprocessing</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Shivek Chhabra.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/image-preprocessing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
