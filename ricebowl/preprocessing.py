@@ -16,8 +16,8 @@ def read_csv(path):
 
 
 # General function to read an excel file
-def read_excel(filename, sheet_name):
-    xl = pd.ExcelFile(filename)
+def read_excel(path, sheet_name):
+    xl = pd.ExcelFile(path)
     df = pd.read_excel(xl, sheet_name)
     return df
 
@@ -62,7 +62,7 @@ def label_encode(df, **col_names):
     le = LabelEncoder()
     for i in col_names.values():
         df[i] = le.fit_transform(df[i])
-    return df
+    return df, le
 
 
 # General Function to one-hot encode the categorical columns
@@ -91,7 +91,7 @@ def dates_diff(df, col1, col2, diff_type='days'):
     return df
 
 
-# General Function to remove duplicate rows
+# General Function to remove duplicate rows.
 def drop_duplicates(df):
     df = df.drop_duplicates(ignore_index=True)
     return df
@@ -103,7 +103,7 @@ def reset_index(df, drop=True):
     return df
 
 
-# General Function to convert datatype
+# General Function to convert a column to a particular datatype
 def to_dtype(df, dtype, **cols):
     if dtype == str:
         for col in cols.values():

@@ -4,6 +4,9 @@ import numpy as np
 from imutils import paths
 
 
+# Overview:
+# This file contains the code for generalised processing of images
+
 # Reading image from path
 def read_image(path):
     img = cv2.imread(path)
@@ -17,8 +20,8 @@ def show_image(img, title='img'):
 
 
 # Writing an image
-def write_image(filename, img):
-    cv2.imwrite(filename, img)
+def write_image(filepath, img):
+    cv2.imwrite(filepath, img)
 
 
 # Inverting (converting to negative)
@@ -39,13 +42,6 @@ def resize(img, length, width):
     return img
 
 
-# For color dodging (lighten the image and getting a sketch)
-def blending(gray, blur, canvas):
-    img_blend = cv2.divide(gray, 255 - blur, scale=256)
-    final = cv2.multiply(img_blend, canvas, scale=1 / 256)
-    return final
-
-
 # Applying Gaussian blurring according to the kernel specified. (Smoothing of image)
 def gaussian_blurring(img, ksize=(21, 21)):
     blur = cv2.GaussianBlur(img, ksize=ksize, sigmaX=0, sigmaY=0)
@@ -53,13 +49,11 @@ def gaussian_blurring(img, ksize=(21, 21)):
 
 
 # Extracting features using ORB (Oriented Fast and Rotated Brief)
-def orb_features(path):
-    img = read_image(path)
+def orb_features(img):
     orb = cv2.ORB_create()
     kp, des = orb.detectAndCompute(img, None)
-
     feat = cv2.drawKeypoints(img, kp, None)
-    return feat
+    return feat, des
 
 
 # Returns the array data of images and their labels (entire path)

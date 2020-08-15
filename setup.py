@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
     name="ricebowl",
-    version="1.0.0",
+    version="0.1.0",
     author="Shivek Chhabra",
     author_email="shivekchhabra@gmail.com",
     description="This package allows the users to preprocess dataframes, images and then use ml models using a single command",
