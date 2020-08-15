@@ -3,7 +3,7 @@ Welcome to ricebowl's documentation!
 
 
 LICENSE
-^^^^^^^
+=======
     
 .. toctree::
    :maxdepth: 20
@@ -12,20 +12,21 @@ LICENSE
    help.rst
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
 
 Dataframe Pre-processing
 ========================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 20
 
    data-preprocessing.rst
+
+
+Image Pre-processing
+====================
+
+.. toctree::
+   :maxdepth: 20
+
    image-preprocessing.rst
 
