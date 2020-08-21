@@ -9,10 +9,6 @@ Simply do:
 
 	pip install ricebowl
 
-and import and use.
-
-"preprocessing.py" contains functions for generalised preprocessing of data in the form of data frames and "images" allow for generalised processing of images as a dataset.
-
-Machine Learning models will be added in the next release.
+and import and use after having a look at the documentation
 
 
