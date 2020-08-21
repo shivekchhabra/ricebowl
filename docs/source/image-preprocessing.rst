@@ -1,6 +1,7 @@
 Image Pre-Processing
 ====================
 Documentation of ricebowl image preprocessing.
+To use this simply do from ricebowl.processing import data_preproc and then use each function with image_preproc.<function>
 
 read_image
 ^^^^^^^^^^

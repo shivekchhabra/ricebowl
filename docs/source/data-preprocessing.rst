@@ -1,7 +1,7 @@
 Data-Preprocessing
 ==================
 Documentation of ricebowl data preprocessing.
-
+To use this simply do from ricebowl.processing import data_preproc and then use each function with data_preproc.<function>
 
 read_csv
 ^^^^^^^^
