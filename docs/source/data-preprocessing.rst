@@ -237,7 +237,7 @@ Usage::
  
 fill_num_abbreviations
 ^^^^^^^^^^^^^^^^^^^^^^
-General function to fill "million M", "billion B", "thousand k", "lakhs L", "crore cr"
+General function to fill "million M", "billion B", "thousand k", "lakhs L", "crore cr".
 
 Parameters- Dataframe, kwargs[column names]
 
@@ -250,4 +250,15 @@ Usage::
 
 
 
+split_data
+^^^^^^^^^^
+General function to split data for modeling purpose.
+
+Parameters- Data, Label, Test size (optional; default=0.3)
+
+Output- xtrain, xtest, ytrain, ytest in array format.
+
+Usage::
+
+    df=split_data(data, label, test_size=0.25)
 

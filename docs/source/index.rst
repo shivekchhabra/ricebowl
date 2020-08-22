@@ -30,3 +30,22 @@ Image Pre-processing
 
    image-preprocessing.rst
 
+
+Modeling
+========
+
+.. toctree::
+   :maxdepth: 20
+
+   modeling.rst
+
+
+Metrics
+=======
+
+.. toctree::
+   :maxdepth: 20
+
+   metrics.rst
+
+
