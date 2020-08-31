@@ -24,3 +24,15 @@ def plot(x, y, xlabel='x', ylabel='y'):
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.show()
+
+
+# General function to plot a scatterplot of the data
+def scatter(data,x=None,y=None):
+    sns.scatterplot(x=x, y=y, data=data)
+    plt.show()
+
+
+# General function to plot a boxplot of the data
+def box(data):
+    sns.boxplot(data=data)
+    plt.show()
