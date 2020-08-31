@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 import numpy as np
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 
 np.random.seed(7)
@@ -186,3 +186,49 @@ def split_data(data, label, test_size=0.3):
     y_train = np.array(y_train)
     y_test = np.array(y_test)
     return x_train, x_test, y_train, y_test
+
+
+# General Function to find correlation excluding all null values
+def find_corr(df, method='pearson'):
+    corr = df.corr(method=method)
+    return corr
+
+
+# General Function to find outliers in a random variable using zscore
+def zscore_outliers(series):
+    data = list(series)
+    outliers = []
+    threshold = 3
+    mean = np.mean(data)
+    std = np.std(data)
+    for i in data:
+        zscore = (i - mean) / std
+        if np.abs(zscore) > threshold:
+            outliers.append(zscore)
+    return outliers
+
+
+# General function to standardize the data using standard scaler.
+def standarization(data, list_of_cols=['ALL']):
+    scaling = StandardScaler()
+    if list_of_cols == ['ALL']:
+        cols = list(data.columns)
+    else:
+        cols = list_of_cols
+
+    data = scaling.fit_transform(data[cols])
+    df = pd.DataFrame(data, columns=cols)
+    return df
+
+
+# General function to normalize the data using min-max scaler.
+def normalization(data, list_of_cols=['ALL']):
+    scaling = MinMaxScaler()
+    if list_of_cols == ['ALL']:
+        cols = list(data.columns)
+    else:
+        cols = list_of_cols
+
+    data = scaling.fit_transform(data[cols])
+    df = pd.DataFrame(data, columns=cols)
+    return df
