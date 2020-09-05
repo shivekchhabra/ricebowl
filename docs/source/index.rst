@@ -49,3 +49,10 @@ Metrics
    metrics.rst
 
 
+Plotting
+========
+
+.. toctree::
+   :maxdepth: 20
+
+   plotting.rst
