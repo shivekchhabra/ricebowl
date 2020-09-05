@@ -10,10 +10,10 @@ requirements = requirements.split('\n')
 
 setuptools.setup(
     name="ricebowl",
-    version="0.3.0",
+    version="0.4.0",
     author="Shivek Chhabra",
     author_email="shivekchhabra@gmail.com",
-    description="This package allows the users to preprocess dataframes, images and then use ml models using a single command",
+    description="This package allows the users to preprocess dataframes and images, plot the data and then use ml models using a single command",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/shivekchhabra/ricebowl",
