@@ -252,7 +252,7 @@ Usage::
 
 split_data
 ^^^^^^^^^^
-General function to split data for modeling purpose.
+General function to split data for modeling purpose
 
 Parameters- Data, Label, Test size (optional; default=0.3)
 
@@ -261,4 +261,57 @@ Output- xtrain, xtest, ytrain, ytest in array format.
 Usage::
 
     df=split_data(data, label, test_size=0.25)
+
+
+find_corr
+^^^^^^^^^
+General function to find correlation excluding all null values
+
+Parameters- Dataframe, method(optional; default='pearson')
+
+Output- correlation data frame.
+
+Usage::
+
+    df=find_corr(df, method='spearman')
+
+
+zscore_outliers
+^^^^^^^^^^^^^^^
+General function to find outliers in a random variable using zscore with a threshold of 2.5 for better results
+
+Parameters- Datarame series
+
+Output- List of outliers.
+
+Usage::
+
+    df=zscore_outliers(df['xyz'])
+
+
+standarization
+^^^^^^^^^^^^^^
+General function to standardize the data using standard scaler
+
+Parameters- Dataframe, list of columns to be converted
+
+Output- Dataframe with updated columns 
+
+Usage::
+
+    df=standarization(data, list_of_cols=['xyz','abc'])
+
+
+normalization
+^^^^^^^^^^^^^
+General function to normalize the data using min-max scaler
+
+Parameters- Dataframe, list of columns to be converted
+
+Output- Dataframe with updated columns
+
+Usage::
+
+    df=normalization(data, list_of_cols=['xyz','abc'])
+
 
