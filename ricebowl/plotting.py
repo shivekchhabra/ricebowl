@@ -23,11 +23,12 @@ def plot(x, y, xlabel='x', ylabel='y'):
     plt.plot(x, 'g*', y, 'ro')
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
+    plt.legend([xlabel, ylabel])
     plt.show()
 
 
 # General function to plot a scatterplot of the data
-def scatter(data,x=None,y=None):
+def scatter(data, x=None, y=None):
     sns.scatterplot(x=x, y=y, data=data)
     plt.show()
 
