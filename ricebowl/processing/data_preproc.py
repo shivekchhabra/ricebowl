@@ -197,15 +197,15 @@ def find_corr(df, method='pearson'):
 # General Function to find outliers in a random variable using zscore
 def zscore_outliers(series):
     data = list(series)
-    outliers = []
-    threshold = 3
     mean = np.mean(data)
     std = np.std(data)
+    threshold = 2.5
+    outlier = []
     for i in data:
-        zscore = (i - mean) / std
-        if np.abs(zscore) > threshold:
-            outliers.append(zscore)
-    return outliers
+        z = (i - mean) / std
+        if z > threshold:
+            outlier.append(i)
+    return outlier
 
 
 # General function to standardize the data using standard scaler.
