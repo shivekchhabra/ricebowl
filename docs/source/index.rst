@@ -1,6 +1,7 @@
 Welcome to ricebowl's documentation!
 ====================================
 
+.. image:: https://readthedocs.org/projects/ricebowl/badge/?version=latest
 
 LICENSE
 =======
