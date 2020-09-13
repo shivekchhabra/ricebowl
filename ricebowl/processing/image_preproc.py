@@ -1,5 +1,6 @@
 import cv2
 import os
+import pydicom
 import numpy as np
 from imutils import paths
 
@@ -70,3 +71,20 @@ def get_images(path):
     labels = np.array(labels)
 
     return data, labels
+
+
+# .dcm images to .png images
+def dcm_to_png(input_directory, output_directory):
+    img_list = [f for f in os.listdir(input_directory)]
+    total = len(img_list)
+    ct = 0
+    for i in img_list:
+        ct = ct + 1
+        print(f'Written image {ct}/{total}')
+        if i.endswith('.dcm'):
+            ds = pydicom.read_file(input_directory + i)  # reads the image
+            img = ds.pixel_array
+            try:
+                cv2.imwrite(output_directory + i.replace('.dcm', '.png'), img)
+            except:
+                pass
