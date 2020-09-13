@@ -16,7 +16,7 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis, LinearD
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier, DecisionTreeRegressor, \
     ExtraTreeRegressor
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
-from lightgbm import LGBMClassifier, LGBMRegressor
+# from lightgbm import LGBMClassifier, LGBMRegressor
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -146,11 +146,11 @@ def bagging_classifier(data, label, test):
 #     return ypred
 
 
-# General function for light-GBM classification
-def light_gbm_classifier(data, label, test):
-    model = LGBMClassifier()
-    ypred = predicting(model, data, label, test)
-    return ypred
+# # General function for light-GBM classification
+# def light_gbm_classifier(data, label, test):
+#     model = LGBMClassifier()
+#     ypred = predicting(model, data, label, test)
+#     return ypred
 
 
 # General function for linear-discriminant-analysis classification
@@ -184,11 +184,11 @@ def knn_regressor(data, label, test):
     return ypred
 
 
-# General function for light-GBM regression
-def light_gbm_regressor(data, label, test):
-    model = LGBMRegressor()
-    ypred = predicting(model, data, label, test)
-    return ypred
+# # General function for light-GBM regression
+# def light_gbm_regressor(data, label, test):
+#     model = LGBMRegressor()
+#     ypred = predicting(model, data, label, test)
+#     return ypred
 
 
 # # General function for xgboost regression
