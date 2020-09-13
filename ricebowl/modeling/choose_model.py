@@ -11,7 +11,7 @@ from sklearn.neural_network import MLPClassifier, MLPRegressor
 from sklearn.ensemble import AdaBoostClassifier, BaggingClassifier, RandomForestClassifier, \
     RandomForestRegressor, AdaBoostRegressor, BaggingRegressor
 from sklearn import svm
-from xgboost import XGBClassifier, XGBRegressor
+# from xgboost import XGBClassifier, XGBRegressor
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis, LinearDiscriminantAnalysis
 from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier, DecisionTreeRegressor, \
     ExtraTreeRegressor
@@ -139,11 +139,11 @@ def bagging_classifier(data, label, test):
     return ypred
 
 
-# General function for xgboost classification
-def xgboost_classifier(data, label, test):
-    model = XGBClassifier()
-    ypred = predicting(model, data, label, test)
-    return ypred
+# # General function for xgboost classification
+# def xgboost_classifier(data, label, test):
+#     model = XGBClassifier()
+#     ypred = predicting(model, data, label, test)
+#     return ypred
 
 
 # General function for light-GBM classification
@@ -191,11 +191,11 @@ def light_gbm_regressor(data, label, test):
     return ypred
 
 
-# General function for xgboost regression
-def xgboost_regressor(data, label, test):
-    model = XGBRegressor()
-    ypred = predicting(model, data, label, test)
-    return ypred
+# # General function for xgboost regression
+# def xgboost_regressor(data, label, test):
+#     model = XGBRegressor()
+#     ypred = predicting(model, data, label, test)
+#     return ypred
 
 
 # General function for linear regression

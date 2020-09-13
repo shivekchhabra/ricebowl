@@ -249,20 +249,6 @@ Usage::
     ypred = bagging_classifier(training_data, training_label, test_data)
 
 
-xgboost_classifier
-^^^^^^^^^^^^^^^^^^
-General function for xgboost classification.
-
-Parameters- training data, training label, test data
-
-Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
-
-
-Output- Predicted values in the form of a dataframe series. These can then be used as is or with metrics module to generate accuracy, f1, confusion matrix and a classification report.
-
-Usage::
-    
-    ypred = xgboost_classifier(training_data, training_label, test_data)
 
 
 light_gbm_classifier
@@ -366,20 +352,6 @@ Usage::
     ypred = light_gbm_regressor(training_data, training_label, test_data)
 
 
-xgboost_regressor
-^^^^^^^^^^^^^^^^^
-General function for xgboost regression.
-
-Parameters- training data, training label, test data
-
-Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
-
-
-Output- Predicted values in the form of a dataframe series. These can then be used as is or with metrics module to generate rmse, r2 score and mape.
-
-Usage::
-
-    ypred = xgboost_regressor(training_data, training_label, test_data)
 
 
 linear_regressor
