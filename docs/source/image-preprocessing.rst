@@ -126,3 +126,17 @@ Usage::
 
 
 
+dcm_to_png
+^^^^^^^^^^
+Converts .dcm images to .png format (from the entire folder to another folder)
+
+Parameters- Path of folder with input images in .dcm format, Path of folder to write the .png format
+
+Output- Images written in the output folder. (Added print command showing how many images are written.)
+
+Usage::
+
+    dcm_to_png('./input_folder_path/','./output_folder_path/')
+
+ 
+

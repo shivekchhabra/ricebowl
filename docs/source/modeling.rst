@@ -13,7 +13,8 @@ random_forest_classifier
 ^^^^^^^^^^^^^^^^^^^^^^^^
 General function for random forest classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -21,14 +22,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = random_forest_classifier(data, label, test)
+    ypred = random_forest_classifier(training_data, training_label, test_data)
 
 
 decision_tree_classifier
 ^^^^^^^^^^^^^^^^^^^^^^^^
 General function for decision tree classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -36,14 +38,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = decision_tree_classifier(data, label, test)
+    ypred = decision_tree_classifier(training_data, training_label, test_data)
 
 
 svm_classifier
 ^^^^^^^^^^^^^^
 General function for support vector machine classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -51,14 +54,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = svm_classifier(data, label, test)
+    ypred = svm_classifier(training_data, training_label, test_data)
 
 
 extra_tree_classifier
 ^^^^^^^^^^^^^^^^^^^^^
 General function for extra-tree classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -66,14 +70,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = extra_tree_classifier(data, label, test)
+    ypred = extra_tree_classifier(training_data, training_label, test_data)
 
  
 gaussian_classifier
 ^^^^^^^^^^^^^^^^^^^
 General function for gaussian classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -81,14 +86,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = gaussian_classifier(data, label, test)
+    ypred = gaussian_classifier(training_data, training_label, test_data)
 
 
 logistic_classifier
 ^^^^^^^^^^^^^^^^^^^
 General function for logistic-regression i.e. classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -96,14 +102,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = logistic_classifier(data, label, test)
+    ypred = logistic_classifier(training_data, training_label, test_data)
 
 
 logistic_cv_classifier
 ^^^^^^^^^^^^^^^^^^^^^^
 General function for logistic regression with cross validation i.e. classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -111,14 +118,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = logistic_cv_classifier(data, label, test) 
+    ypred = logistic_cv_classifier(training_data, training_label, test_data) 
 
 
 bernoulli_classifier
 ^^^^^^^^^^^^^^^^^^^^
 General function for bernoulli classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -126,14 +134,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = bernoulli_classifier(data, label, test)
+    ypred = bernoulli_classifier(training_data, training_label, test_data)
 
 
 multinomial_classifier
 ^^^^^^^^^^^^^^^^^^^^^^
 General function for multinomial classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -141,14 +150,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = multinomial_classifier(data, label, test)
+    ypred = multinomial_classifier(training_data, training_label, test_data)
 
 
 sgd_classifier
 ^^^^^^^^^^^^^^
 General function for stochastic gradient descent classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -156,14 +166,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = sgd_classifier(data, label, test)
+    ypred = sgd_classifier(training_data, training_label, test_data)
 
  
 passive_aggressive_classifier
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 General function for passive-aggressive classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -171,14 +182,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = passive_aggressive_classifier(data, label, test)
+    ypred = passive_aggressive_classifier(training_data, training_label, test_data)
 
 
 ridge_classifier
 ^^^^^^^^^^^^^^^^
 General function for ridge classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -186,14 +198,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = ridge_classifier(data, label, test)
+    ypred = ridge_classifier(training_data, training_label, test_data)
 
 
 mlp_classifier
 ^^^^^^^^^^^^^^
 General function for multi-layer-perceptron classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -201,14 +214,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = mlp_classifier(data, label, test)
+    ypred = mlp_classifier(training_data, training_label, test_data)
 
 
 adaboost_classifier
 ^^^^^^^^^^^^^^^^^^^
 General function for adaboost classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -216,14 +230,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = adaboost_classifier(data, label, test)
+    ypred = adaboost_classifier(training_data, training_label, test_data)
 
 
 bagging_classifier
 ^^^^^^^^^^^^^^^^^^
 General function for bagging classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -231,14 +246,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = bagging_classifier(data, label, test)
+    ypred = bagging_classifier(training_data, training_label, test_data)
 
 
 xgboost_classifier
 ^^^^^^^^^^^^^^^^^^
 General function for xgboost classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -246,14 +262,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = xgboost_classifier(data, label, test)
+    ypred = xgboost_classifier(training_data, training_label, test_data)
 
 
 light_gbm_classifier
 ^^^^^^^^^^^^^^^^^^^^
 General function for light-GBM classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -261,14 +278,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = light_gbm_classifier(data, label, test)
+    ypred = light_gbm_classifier(training_data, training_label, test_data)
 
 
 lda_classifier
 ^^^^^^^^^^^^^^
 General function for linear-discriminant-analysis classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -276,14 +294,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = lda_classifier(data, label, test)
+    ypred = lda_classifier(training_data, training_label, test_data)
 
 
 qda_classifier
 ^^^^^^^^^^^^^^
 General function for quadratic-discriminant-analysis classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -291,14 +310,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = qda_classifier(data, label, test)
+    ypred = qda_classifier(training_data, training_label, test_data)
 
 
 knn_classifier
 ^^^^^^^^^^^^^^
 General function for k-nearest-neighbour classification.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -306,7 +326,7 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
     
-    ypred = knn_classifier(data, label, test)
+    ypred = knn_classifier(training_data, training_label, test_data)
 
 
 Regression Models:
@@ -318,7 +338,8 @@ knn_regressor
 ^^^^^^^^^^^^^
 General function for k-nearest-neighbour regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -326,14 +347,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = knn_regressor(data, label, test)
+    ypred = knn_regressor(training_data, training_label, test_data)
 
 
 light_gbm_regressor
 ^^^^^^^^^^^^^^^^^^^
 General function for light-GBM regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -341,14 +363,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = light_gbm_regressor(data, label, test)
+    ypred = light_gbm_regressor(training_data, training_label, test_data)
 
 
 xgboost_regressor
 ^^^^^^^^^^^^^^^^^
 General function for xgboost regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -356,14 +379,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = xgboost_regressor(data, label, test)
+    ypred = xgboost_regressor(training_data, training_label, test_data)
 
 
 linear_regressor
 ^^^^^^^^^^^^^^^^
 General function for linear regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -371,14 +395,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = linear_regressor(data, label, test)
+    ypred = linear_regressor(training_data, training_label, test_data)
 
 
 ransac_regressor
 ^^^^^^^^^^^^^^^^
 General function for ransac regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -386,14 +411,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = ransac_regressor(data, label, test)
+    ypred = ransac_regressor(training_data, training_label, test_data)
 
 
 ARD_regressor
 ^^^^^^^^^^^^^
 General function for ARD regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -401,14 +427,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = ARD_regressor(data, label, test)
+    ypred = ARD_regressor(training_data, training_label, test_data)
 
 
 huber_regressor
 ^^^^^^^^^^^^^^^
 General function for huber regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -416,14 +443,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = huber_regressor(data, label, test)
+    ypred = huber_regressor(training_data, training_label, test_data)
 
 
 sgd_regressor
 ^^^^^^^^^^^^^
 General function for stochastic-gradient-descent regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -431,14 +459,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = sgd_regressor(data, label, test)
+    ypred = sgd_regressor(training_data, training_label, test_data)
 
 
 theilsen_regressor
 ^^^^^^^^^^^^^^^^^^
 General function for theilsen regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -446,14 +475,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = theilsen_regressor(data, label, test)
+    ypred = theilsen_regressor(training_data, training_label, test_data)
 
 
 passive_aggressive_regressor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 General function for passive aggressive regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -461,14 +491,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = passive_aggressive_regressor(data, label, test)
+    ypred = passive_aggressive_regressor(training_data, training_label, test_data)
 
 
 mlp_regressor
 ^^^^^^^^^^^^^
 General function for multi-layered-perceptron regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -476,14 +507,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = mlp_regressor(data, label, test)
+    ypred = mlp_regressor(training_data, training_label, test_data)
 
 
 adaboost_regressor
 ^^^^^^^^^^^^^^^^^^
 General function for adaboost regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -491,14 +523,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = adaboost_regressor(data, label, test)
+    ypred = adaboost_regressor(training_data, training_label, test_data)
 
 
 random_forest_regressor
 ^^^^^^^^^^^^^^^^^^^^^^^
 General function for random-forest regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -506,14 +539,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = random_forest_regressor(data, label, test)
+    ypred = random_forest_regressor(training_data, training_label, test_data)
 
 
 decision_tree_regressor
 ^^^^^^^^^^^^^^^^^^^^^^^
 General function for decision tree regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -521,14 +555,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = decision_tree_regressor(data, label, test)
+    ypred = decision_tree_regressor(training_data, training_label, test_data)
 
 
 svm_regressor
 ^^^^^^^^^^^^^
 General function for svm regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -536,14 +571,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = svm_regressor(data, label, test)
+    ypred = svm_regressor(training_data, training_label, test_data)
 
 
 bagging_regressor
 ^^^^^^^^^^^^^^^^^
 General function for bagging regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -551,14 +587,15 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = bagging_regressor(data, label, test)
+    ypred = bagging_regressor(training_data, training_label, test_data)
 
 
 extra_tree_regressor
 ^^^^^^^^^^^^^^^^^^^^
 General function for extra tree regression.
 
-Parameters- data, label, test
+Parameters- training data, training label, test data
+
 Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
 
 
@@ -566,6 +603,38 @@ Output- Predicted values in the form of a dataframe series. These can then be us
 
 Usage::
 
-    ypred = extra_tree_regressor(data, label, test)
+    ypred = extra_tree_regressor(training_data, training_label, test_data)
+
+
+lasso_regressor
+^^^^^^^^^^^^^^^
+General function for Lasso regression.
+
+Parameters- training data, training label, test data
+
+Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
+
+
+Output- Predicted values in the form of a dataframe series. These can then be used as is or with metrics module to generate rmse, r2 score and mape.
+
+Usage::
+
+    ypred = lasso_regressor(training_data, training_label, test_data)
+
+
+ridge_regressor
+^^^^^^^^^^^^^^^
+General function for Ridge regression.
+
+Parameters- training data, training label, test data
+
+Please note these parameters can be in the form of a list/ numpy array/ pandas dataframes.
+
+
+Output- Predicted values in the form of a dataframe series. These can then be used as is or with metrics module to generate rmse, r2 score and mape.
+
+Usage::
+
+    ypred = ridge_regressor(training_data, training_label, test_data)
 
 
