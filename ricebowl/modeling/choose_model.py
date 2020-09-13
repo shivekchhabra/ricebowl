@@ -6,7 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.naive_bayes import BernoulliNB
 from sklearn.linear_model import SGDClassifier, PassiveAggressiveClassifier, RidgeClassifier, \
     LinearRegression, RANSACRegressor, ARDRegression, HuberRegressor, LogisticRegression, \
-    LogisticRegressionCV, SGDRegressor, TheilSenRegressor, PassiveAggressiveRegressor
+    LogisticRegressionCV, SGDRegressor, TheilSenRegressor, PassiveAggressiveRegressor, Lasso, Ridge
 from sklearn.neural_network import MLPClassifier, MLPRegressor
 from sklearn.ensemble import AdaBoostClassifier, BaggingClassifier, RandomForestClassifier, \
     RandomForestRegressor, AdaBoostRegressor, BaggingRegressor
@@ -296,3 +296,15 @@ def extra_tree_regressor(data, label, test):
     return ypred
 
 
+# General function for Lasso regression
+def lasso_regressor(data, label, test):
+    model = Lasso()
+    ypred = predicting(model, data, label, test)
+    return ypred
+
+
+# General function for Ridge regression
+def ridge_regressor(data, label, test):
+    model = Ridge()
+    ypred = predicting(model, data, label, test)
+    return ypred
