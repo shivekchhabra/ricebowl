@@ -77,3 +77,19 @@ Usage::
     box(data)
 
 
+pie_chart
+^^^^^^^^^
+General function to plot a pie chart.
+
+Parameters- data, column name, title(optional; default- column name), labels(list; optional; default='None'), convert to label encoded format (True/False; default- False) 
+
+Output- Graph is plotted
+
+Usage::
+    
+    pie_chart(data, 'gender', title='Sex ratio', labels=["Male","Female"], convert=True)
+
+
+
+
+
