@@ -13,7 +13,7 @@ Output- Dataframe
 
 Usage::
     
-    df=read_csv(path)
+    df = read_csv(path)
 
 
 read_excel
@@ -26,7 +26,7 @@ Output- Dataframe
 
 Usage::
     
-    df=read_excel(path,sheet_name)
+    df = read_excel(path,sheet_name)
 
 
 reformat_col_headers
@@ -40,7 +40,7 @@ Output- Dataframe with formatted column headers
 
 Usage::
     
-    df=reformat_col_headers(df)
+    df = reformat_col_headers(df)
 
 
 str_to_datetime
@@ -54,7 +54,7 @@ Output- Dataframe with the columns updated to datetime
 
 Usage::
     
-    df=str_to_datetime(df, c1='col1', c2='col2' .... cn='col_n')
+    df = str_to_datetime(df, c1='col1', c2='col2' .... cn='col_n')
 
 
 timestamp_to_datetime
@@ -68,7 +68,7 @@ Output- Dataframe with the columns updated to datetime
 
 Usage::
     
-    df=timestamp_to_datetime(df, c1='col1', c2='col2' .... cn='col_n')
+    df = timestamp_to_datetime(df, c1='col1', c2='col2' .... cn='col_n')
 
 
 to_timestamp
@@ -82,7 +82,7 @@ Output- Dataframe with the columns updated to timestamp
 
 Usage::
     
-    df=to_timestamp(df, c1='col1', c2='col2' .... cn='col_n')
+    df = to_timestamp(df, c1='col1', c2='col2' .... cn='col_n')
 
 
 label_encode
@@ -96,7 +96,7 @@ Output- Dataframe with the columns updated with encoded labels, label encoder ob
 
 Usage::
     
-    df=label_encode(df, c1='col1', c2='col2' .... cn='col_n')
+    df = label_encode(df, c1='col1', c2='col2' .... cn='col_n')
 
 
 one_hot_encode
@@ -110,7 +110,7 @@ Output- Dataframe with the columns updated with encoded labels
 
 Usage::
     
-    df=one_hot_encode(df, c1='col1', c2='col2' .... cn='col_n')
+    df = one_hot_encode(df, c1='col1', c2='col2' .... cn='col_n')
 
 
 dates_diff
@@ -125,7 +125,7 @@ Error Print- If a wrong "diff_type" is provided, prints an error message.
 
 Usage::
     
-    df=dates_diff(df,col1,col2,diff_type='days')
+    df = dates_diff(df,col1,col2,diff_type='days')
 
 
 
@@ -139,7 +139,7 @@ Output- Dataframe without duplicate rows.
 
 Usage::
     
-    df=drop_duplicates(df)
+    df = drop_duplicates(df)
 
 
 reset_index
@@ -152,7 +152,7 @@ Output- Dataframe with a new index
 
 Usage::
     
-    df=reset_index(df,drop=True)
+    df = reset_index(df,drop=True)
 
 
 to_dtype
@@ -165,7 +165,7 @@ Output- Dataframe with updated columns
 
 Usage::
     
-    df=to_dtype(df, 'float', c1='col1', c2='col2'...., cn='col_n')
+    df = to_dtype(df, 'float', c1='col1', c2='col2'...., cn='col_n')
 
 
 
@@ -179,7 +179,7 @@ Output- Dataframe with the columns updated. The null values in the columns will 
 
 Usage::
     
-    df=fill_mode(df, c1='col1', c2='col2' .... cn='col_n')
+    df = fill_mode(df, c1='col1', c2='col2' .... cn='col_n')
 
 
 fill_mean
@@ -192,7 +192,7 @@ Output- Dataframe with the columns updated. The null values in the columns will 
 
 Usage::
     
-    df=fill_mean(df, c1='col1', c2='col2' .... cn='col_n')
+    df = fill_mean(df, c1='col1', c2='col2' .... cn='col_n')
 
 
 melt
@@ -205,7 +205,7 @@ Output- Dataframe with the columns updated. The data is melted.
 
 Usage::
     
-    df=melt(df, ['col1','col2'...'col_n'], 'new_col_name_xyz', value)
+    df = melt(df, ['col1','col2'...'col_n'], 'new_col_name_xyz', value)
 
 
 split_columns
@@ -219,7 +219,7 @@ Example: if a column had dates like 2019-01-01 and we use this function with a s
 
 Usage::
 
-    df=split_columns(df, 'column_name', separator='-')
+    df = split_columns(df, 'column_name', separator='-')
 
 
 remove_unwanted_chars
@@ -232,7 +232,7 @@ Output- Dataframe with unwanted characters removed. (like $,€,£,inr,¥,₹)
 
 Usage::
 
-    df=remove_unwanted_chars(df, c1='col1', c2='col2' .... cn='col_n')
+    df = remove_unwanted_chars(df, c1='col1', c2='col2' .... cn='col_n')
 
  
 fill_num_abbreviations
@@ -246,7 +246,7 @@ Example: 20k would be replaced by 20000
 
 Usage::
 
-    df=fill_num_abbreviations(df, c1='col1', c2='col2' .... cn='col_n')
+    df = fill_num_abbreviations(df, c1='col1', c2='col2' .... cn='col_n')
 
 
 
@@ -260,7 +260,7 @@ Output- xtrain, xtest, ytrain, ytest in array format.
 
 Usage::
 
-    df=split_data(data, label, test_size=0.25)
+    xtrain, xtest, ytrain, ytest = split_data(data, label, test_size=0.25)
 
 
 find_corr
@@ -273,7 +273,7 @@ Output- correlation data frame.
 
 Usage::
 
-    df=find_corr(df, method='spearman')
+    corr = find_corr(df, method='spearman')
 
 
 zscore_outliers
@@ -286,7 +286,7 @@ Output- List of outliers.
 
 Usage::
 
-    df=zscore_outliers(df['xyz'])
+    outliers = zscore_outliers(df['xyz'])
 
 
 standarization
@@ -299,7 +299,7 @@ Output- Dataframe with updated columns
 
 Usage::
 
-    df=standarization(data, list_of_cols=['xyz','abc'])
+    df = standarization(data, list_of_cols=['xyz','abc'])
 
 
 normalization
@@ -312,6 +312,19 @@ Output- Dataframe with updated columns
 
 Usage::
 
-    df=normalization(data, list_of_cols=['xyz','abc'])
+    df = normalization(data, list_of_cols=['xyz','abc'])
+
+
+basic_stats
+^^^^^^^^^^^
+General function to get all the basic stats of the data
+
+Parameters- Dataframe, file path to write the stats(Optional, default=None- prints on console)
+
+Output- Basic stats in string format.
+
+Usage::
+
+    stats = basic_stats(data, file = './xyz.txt')
 
 
