@@ -232,3 +232,25 @@ def normalization(data, list_of_cols=['ALL']):
     data = scaling.fit_transform(data[cols])
     df = pd.DataFrame(data, columns=cols)
     return df
+
+
+# General function to get all the basic stats of the data
+def basic_stats(data, file=None):
+    s = ''
+    s = s + '------------Unique values:-----------------\n'
+    s = s + str(data.nunique())
+    s = s + '\n\n------------Null values:-----------------\n'
+    s = s + str(data.isnull().sum())
+    s = s + '\n\n------------Dtypes:-----------------\n'
+    s = s + str(data.dtypes)
+    temp = data.drop_duplicates()
+    duplicates = data.shape[0] - temp.shape[0]
+    s = s + '\n\n------------Duplicate values:-----------------\n'
+    s = s + str(duplicates)
+    if file == None:
+        print(s)
+    else:
+        f = open(file, 'w')
+        f.write(s)
+        f.close()
+        print('Written in file: {}'.format(file))
