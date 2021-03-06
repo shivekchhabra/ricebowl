@@ -1,10 +1,16 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-from ricebowl.ricebowl.processing import data_preproc
+from ricebowl.processing import data_preproc
 
 
-# General function to get a pair plot of the entire data. Hue can be modified.
 def pairplot(df, hue=None, cols=['ALL']):
+    """
+    General function to get a pair plot of the entire data. Hue can be modified.
+    :param df: Input data
+    :param hue: Particular column to refer
+    :param cols: Columns to refer
+    :return: Displays a pairplot
+    """
     if cols == ['ALL']:
         sns.pairplot(data=df, hue=hue)
     else:
@@ -12,15 +18,27 @@ def pairplot(df, hue=None, cols=['ALL']):
     plt.show()
 
 
-# General function to get plots for all columns passed. Press 'q' for next figure.
 def distribution(df, **col_names):
+    """
+    General function to get plots for all columns passed. Press 'q' for next figure.
+    :param df: Input data
+    :param col_names: Columns to refer and plot
+    :return: Displays a distplot
+    """
     for i in col_names.values():
         sns.distplot(df[i], label=i)
         plt.show()
 
 
-# General function to plot relationship between 2 random variables. x,y have input types as list/df series.
 def plot(x, y, xlabel='x', ylabel='y'):
+    """
+    General function to plot relationship between 2 random variables. x,y have input types as list/df series.
+    :param x: First random variable (list/series)
+    :param y: Second random variable (list/series)
+    :param xlabel: Label for x axis
+    :param ylabel: Label for y axis
+    :return: Displays a chart showing relationship between 2 plots
+    """
     plt.plot(x, 'g*', y, 'ro')
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -28,20 +46,38 @@ def plot(x, y, xlabel='x', ylabel='y'):
     plt.show()
 
 
-# General function to plot a scatterplot of the data
 def scatter(data, x=None, y=None):
+    """
+    General function to plot a scatterplot of the data
+    :param data: Input d
+    :param x: x axis
+    :param y: y axis
+    :return: Produces a scatter plot of the given data
+    """
     sns.scatterplot(x=x, y=y, data=data)
     plt.show()
 
 
-# General function to plot a boxplot of the data
 def box(data):
+    """
+    General function to plot a boxplot of the data
+    :param data: Input data
+    :return: Produces a box plot
+    """
     sns.boxplot(data=data)
     plt.show()
 
 
-# General function for plotting a pie chart
 def pie_chart(data, column_name, title='Title', labels=['None'], convert=False):
+    """
+    General function for plotting a pie chart
+    :param data: Input data
+    :param column_name: Column to filter on and make a pie chart of
+    :param title: Title of the chart
+    :param labels: Labels to be used
+    :param convert: Convert to label encoded form (True/False)
+    :return: Displays a pie chart
+    """
     if title == 'Title':
         title = column_name.capitalize()
     if convert == True:
